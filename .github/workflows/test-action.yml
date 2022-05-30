@@ -1,0 +1,23 @@
+name: TEST DOCKERFILE ACTION 
+on:
+  push: 
+    branches: 
+      - develop
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Check input and output
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: gtamang001/docker-actions@main
+        with:
+          who-to-greet: 'Ganga Tamang'
+          another: 'Sital Tamang'
+
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: |
+          echo "The time was ${{ steps.hello.outputs.time }}"
+          echo "The second output was ${{steps.hello.outputs.another }}"
