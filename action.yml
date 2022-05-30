@@ -15,4 +15,4 @@ runs:
   args: 
     - ${{ inputs.who-to-greet }}
     - ${{ inputs.another }}
-  entrypoint: 'entrypoint.sh'
+  entrypoint: '/entrypoint.sh'
