@@ -6,6 +6,10 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  another: 
+    description: 'Just another'
+    required: true 
+    defautl: 'Another'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -15,4 +19,3 @@ runs:
   args: 
     - ${{ inputs.who-to-greet }}
     - ${{ inputs.another }}
-  entrypoint: '/entrypoint.sh'
