@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: gtamang001/docker-actions@main
+        uses: gtamang001/dockerfile-actions@main
         with:
           who-to-greet: 'Ganga Tamang'
           another: 'Sital Tamang'
